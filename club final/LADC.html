@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LADC</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <label class="logo">Samadhan</label>
+        <ul>
+           <li><a class="active" href="#">Home</a></li>
+           <li>
+              <a href="#">Core-members
+              <i class="fas fa-caret-down"></i>
+              </a>
+              <ul>
+                 <li><a href="#"> Ankit kumar</a></li>
+                 <li><a href="#">Ayush rathore</a></li>
+                 <li><a href="#">Vikash gupta</a></li>
+                 <li><a href="#">Malika</a></li>
+              </ul>
+           </li>
+           <li>
+              <a href="#">Events
+              <i class="fas fa-caret-down"></i>
+              </a>
+              <ul>
+                 <li><a href="#">past-events </a></li>
+                 <li><a href="#">upcomming</a></li>
+                 <li>
+                    <a href="#">About-us
+                    <i class="fas fa-caret-right"></i>
+                    </a>
+                    <ul>
+                       <li><a href="#">Awards</a></li>
+                       <li><a href="#">National</a></li>
+                       <li><a href="#">past-Allum</a></li>
+                    </ul>
+                 </li>
+              </ul>
+           </li>
+           <li><a href="#">Contact</a></li>
+           <li><a href="#">Feedback</a></li>
+        </ul>
+     </nav>
+    <div id="wrapper">
+        <div class="container" id="home">
+            <div class="heading-section">
+                <div class="heading-left">
+                    <img src="image\1...jpg" alt="">
+                </div>
+                <div class="heading-centre">
+                    <div class="club-name">
+                        LADC
+                    </div>
+                    <div class="club-quote">
+                        Excellence in oratory !!
+                    </div>
+                    <!-- <div class="college-name">
+                        Dr B R Ambedkar National Institute of Technology, Jalandhar
+                    </div> -->
+                </div>
+                <div class="heading-right">
+                    <img src="./images/LogoNIT1.png" alt="">
+                </div>
+
+            </div>
+
+            <!-- <div class="navbar">
+                <div class="nav-items">
+                    <div class="nav-item-link"><a target="_blank" href="https://www.nitj.ac.in">NITJ</a></div>
+                    <div class="nav-item-link"><a href="#home">Home</a></div>
+                    <div class="nav-item-link"><a href="#Machine learning">Events</a></div>
+                    <div class="nav-item-link"><a href="#aboutUsi">About-Us</a></div>
+                    <div class="nav-item-link"><a href="#Core">Core-Member</a></div>
+
+                </div>
+            </div> -->
+
+            <div class="aboutUs-section" id="aboutUsi">
+                <div class="aboutUs-section-item" id="aboutUs">
+                    <h2 class="aboutUs-section-heading">About Us</h2>
+                    <br>
+                    <p class="aboutUs-section-desc"> :Ladc is official literary and debating club of nit jalandhar dedicated to excellence in all forms of oratory and litracy.</p>
+
+                </div>
+                <div class="aboutUs-section-item" id="vision">
+                    <h2 class="aboutUs-section-heading">Vision</h2>
+                    <br>
+                    <p class="aboutUs-section-desc">:To become most leading and best debating club helping the students in building good debating skills.
+                        .</p>
+
+                </div>
+                <div class="aboutUs-section-item" id="mission">
+                    <h2 class="aboutUs-section-heading">Mission</h2>
+                    <br>
+                    <p class="aboutUs-section-desc"> To encourage the students for participating in various oratory and debating events.</p>
+
+                </div>
+            </div>
+            <!-- <div class="content-section">
+                <div class="aboutUs-section-heading">
+                    <h2>Events</h2>
+                </div>
+                <div class="content">
+                    <div class="content-image-box">
+                        <img src="https://picsum.photos/seed/picsum/200/300" alt="content-img">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, consectetur in, omnis fuga maiores officiis eaque odit ullam assumenda minus sapiente dolor atque voluptatem eos hic reprehenderit. Optio dolorum quibusdam nemo, eos inventore modi dicta quas delectus asperiores consequuntur dolorem voluptatem nisi vel unde laboriosam ipsam. Quis veniam saepe ullam?
+                    </p>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div> -->
+    <div class="chat-popup" id="myForm">
+        <form action="/backend.php" class="form-container">
+          <h1>Information Box</h1>
+      
+          <label for="msg"><b>Message</b></label>
+          <textarea placeholder="" name="msg" required></textarea>
+      
+          <!-- <button type="submit" class="btn">Send</button> -->
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+      <style>
+
+
+        {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.form-popup {
+    position: relative;
+  display: none;
+  position:relative;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    border-radius: 30%;
+  max-width: 1400px;
+  padding: 10px;
+  padding-right: 200px;
+  padding-left: 200px;
+  background-color: rgb(192, 241, 69);
+  margin-top: 3em;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #2f6dda;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: rgb(59, 182, 234);
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+      </style>
+      <script>
+        function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+      </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
